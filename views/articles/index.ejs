@@ -1,0 +1,26 @@
+<%- include("partials/header") %> 
+<%- include("partials/navbar") %>  
+
+<body>
+    
+  
+    <div class="container mt-5">
+        <h1 class="text-success text-center display-2 text-capitalize"><%=category %> </h1>
+
+        <div class="container text-center mt-5 lh-lg">
+            <ul class="list-group list-group-flush">
+                <% for(let a of article){ %> 
+                    <a class="list-group-item fw-bolder fs-4" href="/articles/<%=a._id %> "><%= a.name %></a>
+
+                    <% } %> 
+                        
+                 </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+</body>

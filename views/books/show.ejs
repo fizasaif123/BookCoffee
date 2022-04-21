@@ -1,0 +1,33 @@
+<%- include("partials/header") %> 
+<%- include("partials/navbar") %> 
+
+<body>
+
+    
+    <div class="container mx-auto col d-flex justify-content-center mt-5">
+        <div class="card" style="width: 30rem;">
+            <div class="card-body border border-none">
+              <h1 class="card-title text-uppercase text-center"><%= book.name %> </h1>
+              <h6 class="card-subtitle mb-2 text-muted text-capitalize">-<%= book.author %> </h6>
+              <a class="card-text text-capitalize" href="/books?category=<%=book.category %> "><%= book.category %> </a>
+              <h6 class="card-title mt-3">year:<%= book.year %> </h1>
+              <h6 class="card-title mt-3">Price:<%= book.price %>$ </h1>
+              <h6 class="card-title mt-3 text-success fw-bold"><h6 class="text-dark fw-bold">Reviews:</h6> <%= book.comments %>  </h6> <br>
+              <a href="/books/<%=book._id%>/edit" class="card-link fw-bold fs-5 ">Edit</a>
+              <form action="/books/<%=book._id %>?_method=DELETE" method="post">
+                <button class="btn btn-danger mt-3">Delete</button>
+              </form>
+           
+    
+              
+            </div>
+          </div>
+         
+    </div>
+ 
+    
+
+
+    
+
+</body>

@@ -1,0 +1,67 @@
+<%- include("partials/header") %> 
+<%- include("partials/navbar") %> 
+  
+
+<body>
+    <h1 class="display-3  mx-auto col d-flex justify-content-center mt-3">Add Book</h1>
+    <div class="container  mx-auto col d-flex justify-content-center mt-3">
+     
+
+        <div class="card" style="width: 20rem;">
+            <img src="/images/a.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+
+                <form action="/books" method="POST">
+<div class="form-group">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" class="form-control"  required>
+</div>
+<div class="form-group">
+
+    <label for="author">Author:</label>
+    <input type="text" id="author"  name="author"  class="form-control" required>
+</div>
+<div class="form-group">
+
+    <label for="year">Year:</label>
+    <input type="number" id="year"  name="year"  class="form-control" required>
+</div>
+<div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="price"  name="price"  class="form-control" required>
+</div>
+
+
+<div class="form-group">
+    <label for="category">Category:</label>
+    <select class="form-select form-control" id="category" name="category">
+        <% for(let cat of category){%>
+            <option value="<%=cat %>"><%=cat %></option>
+
+        <% } %> 
+      </select>
+</div>
+
+<div class="form-floating mt-3">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="comments"></textarea>
+    <label for="floatingTextarea">Comments</label>
+  </div>
+       
+
+<button class="btn btn-success mt-5">Submit</button>
+                </form>
+
+
+              
+             
+            </div>
+          </div>
+
+
+    </div>
+
+    
+
+
+</body>
